@@ -14,20 +14,20 @@ let handler = async (m, { conn, usedPrefix }) => {
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let username = conn.getName(who)
     let str = `
-╭───ꕥ *PROFILE* ꕥ───✾
-│•> Name: ${username}
-│•> Premium: ${premium ? `${conn.msToDate(premiumTime - new Date() * 1)}` : 'Gratisan'}
-│•> Number: ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
-│•> Umur: *${age == '-1' ? 'Belum Daftar' : age}*
-│•> Link: wa.me/${m.sender.split`@`[0]}
-│•> Level: *${level}*
-│•> Rank : *${role}*
-│•> Limit: *${limit}*
-│•> Atm: *${atm}*
-│•> Money: *${money}*
-│•> Exp  : *${exp}*
-│•> Warning : *${warning}*
-╰─────────────────────
+╭──「 *PROFILE* 」──⬣
+│• Name : ${username}
+│• Premium : ${premium ? `${conn.msToDate(premiumTime - new Date() * 1)}` : 'Gratisan'}
+│• Number : ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
+│• Umur : *${age == '-1' ? 'Belum Daftar' : age}*
+│• Link : wa.me/${m.sender.split`@`[0]}
+│• Level : *${level}*
+│• Rank : *${role}*
+│• Limit : *${limit}*
+│• Atm : *${atm}*
+│• Money : *${money}*
+│• Exp : *${exp}*
+│• Warning : *${warning}*
+╰────────────────⬣
 `.trim()
     let mentionedJid = [who]
     //conn.sendFile(m.chat, pp, 'pp.jpg', str, m, false, { contextInfo: { mentionedJid }})
