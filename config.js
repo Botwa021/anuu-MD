@@ -34,7 +34,7 @@ global.APIKeys = { // APIKey Here
 //global.wm = '𝑴𝒚𝑩𝒐𝒕-𝑴𝒖𝒍𝒕𝒊 𝑫𝒆𝒗𝒊𝒄𝒆'
 global.wait = '_*𝒔𝒆𝒅𝒂𝒏𝒈 𝒅𝒊 𝒑𝒓𝒐𝒔𝒆𝒔...*_'
 global.eror = '_*𝒎𝒂𝒂𝒇 𝒔𝒆𝒓𝒗𝒆𝒓 𝒆𝒓𝒓𝒐𝒓...*_'
-global. image = 'https://telegra.ph/file/c59badf8e2d671df621ad.jpg'
+global. image = 'https://telegra.ph/file/a8ec3406cae4f18f87811.jpg'
 
 //========Url Template Buttons=========//
 global.dtu = '𝑰𝒏𝒔𝒕𝒂𝒈𝒓𝒂𝒎'
