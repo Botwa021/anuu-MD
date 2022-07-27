@@ -5,36 +5,39 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌────────────────⬣
-│            *ɴᴀᴅɪᴀ ʙᴏᴛ*
+┌───────═┅═────────⬣
+│      *Hai*, %name
 └┬──────────────┈ ⳹
+   │      「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥 」
 ┌┤• *Tersisa* : %limit Limit
 ││• *Role* : %role
 ││• *Level* : %level 
 ││• *Exp* : %totalexp XP 
-└┬──────────────┈ ⳹
-┌┤           *ᴋᴀʟᴀɴᴅᴇʀ*
-│└──────────────┈ ⳹
-│• *Hari* : %week
-│• *Tanggal* : %week %weton, %date
-│• *Tanggal Islam* : %dateIslamic
-│• *Waktu* : %time
-└┬──────────────┈ ⳹
-┌┤           *ʙᴏᴛ ɪɴғᴏ*
-│└──────────────┈ ⳹
+││• *Hari* : %week
+││• *Tanggal* : %week %weton, %date
+││• *Tanggal Islam* : %dateIslamic
+││• *Waktu* : %time
+│└──────────────┈ ⳹ 
+│        「 𝗕𝗢𝗧 𝗜𝗡𝗙𝗢 」
 │• *Uptime* : %uptime
 │• *Bailyes Version* : 4.2.0
 │• *Database* : %rtotalreg dari %totalreg
 │• *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-│• *Github* :
-│• https://github.com/Botwa021
-└────────────────⬣
+│• *Instagram* :
+│• *https://instagram.com/mursid.st*
+├───────────────┈ ⳹
+│       「 𝗚𝗥𝗨𝗣 𝗕𝗢𝗧 」
+│• *bit.ly/grup-wabot-aq¹*
+│• *bit.ly/grup-wabot-aq²*
+│• *bit.ly/grup-wabot-aq³*
+│• *bit.ly/grup-wabot-aq⁴*
+└───────═┅═────────⬣
 %readmore`.trim(),
-  header: '┌──『 %category 』──⬣',
+  header: '┌──「 %category 」──⬣',
   body: '│• %cmd %islimit %isPremium',
-  footer: '└───────⬣\n',
+  footer: '└───═┅═───⬣\n',
   after: `
-┌──  *BIG THANKS TO*  ───
+┌──  *BIG THANKS TO*  ───⬣
 │• Allah SWT
 │• Nurutomo as wabot-aq
 │• Istikmal as BochilGaming
@@ -53,7 +56,7 @@ const defaultMenu = {
 │• Mursid S
 │• Nadia Cans
 │• All Creator Bot
-└──────
+└─────═┅═─────⬣
 
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -218,30 +221,30 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       let judul = `${global.ucapan}, ${name}`.trim()
       const sections = [
       {
-        title: 'ℓιѕт мєηυ ηα∂ια вσт',
+        title: '𝒍𝒊𝒔𝒕 𝒎𝒆𝒏𝒖 𝒏𝒂𝒅𝒊𝒂 𝒃𝒐𝒕',
         rows: [
-          { title: 'all', rowId: `${_p}? all` },
-          { title: 'game', rowId: `${_p}? game` },
-          { title: 'xp', rowId: `${_p}? xp` },
-          { title: 'stiker', rowId: `${_p}? stiker` },
-          { title: 'kerang ajaib', rowId: `${_p}? kerangajaib` },
-          { title: 'quotes', rowId: `${_p}? quotes` },
-          { title: 'grup', rowId: `${_p}? grup` },
-          { title: 'premium', rowId: `${_p}? premium` },
-          { title: 'internet', rowId: `${_p}? internet` },
-          { title: 'anonymous', rowId: `${_p}? anonymous` },
-          { title: 'nulis & Logo', rowId: `${_p}? nulis` },
-          { title: 'downloader', rowId: `${_p}? downloader` },
-          { title: 'tools', rowId: `${_p}? tools` },
-          { title: 'fun', rowId: `${_p}? fun`},
-          { title: 'database', rowId: `${_p}? database` },
-          { title: 'vote & Absen', rowId: `${_p}? vote` },
-          { title: "Al-Qur\'an", rowId: `${_p}? quran` },
-          { title: 'pengubah suara', rowId: `${_p}? audio` },
-          { title: 'jadi bot', rowId: `${_p}? jadibot` },
-          { title: 'info', rowId: `${_p}? info` },
-          { title: 'tanpa kategori', rowId: `${_p}? tanpakategori` },
-          { title: 'owner', rowId: `${_p}? owner` },
+          { title: '𝒂𝒍𝒍', rowId: `${_p}? all` },
+          { title: '𝒈𝒂𝒎𝒆', rowId: `${_p}? game` },
+          { title: '𝒆𝒙𝒑', rowId: `${_p}? xp` },
+          { title: '𝒔𝒕𝒊𝒄𝒌𝒆𝒓', rowId: `${_p}? stiker` },
+          { title: '𝒌𝒆𝒓𝒂𝒏𝒈 𝒂𝒋𝒂𝒊𝒃', rowId: `${_p}? kerangajaib` },
+          { title: '𝒒𝒖𝒐𝒕𝒆𝒔', rowId: `${_p}? quotes` },
+          { title: '𝒈𝒓𝒖𝒑', rowId: `${_p}? grup` },
+          { title: '𝒑𝒓𝒆𝒎𝒊𝒖𝒎', rowId: `${_p}? premium` },
+          { title: '𝒊𝒏𝒕𝒆𝒓𝒏𝒆𝒕', rowId: `${_p}? internet` },
+          { title: '𝒂𝒏𝒐𝒏𝒚𝒎𝒐𝒖𝒔', rowId: `${_p}? anonymous` },
+          { title: '𝒏𝒖𝒍𝒊𝒔 & 𝒍𝒐𝒈𝒐', rowId: `${_p}? nulis` },
+          { title: '𝒅𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒆𝒓', rowId: `${_p}? downloader` },
+          { title: '𝒕𝒐𝒐𝒍𝒔', rowId: `${_p}? tools` },
+          { title: '𝒇𝒖𝒏', rowId: `${_p}? fun`},
+          { title: '𝒅𝒂𝒕𝒂𝒃𝒂𝒔𝒆', rowId: `${_p}? database` },
+          { title: '𝒗𝒐𝒕𝒆 & 𝒂𝒃𝒔𝒆𝒏', rowId: `${_p}? vote` },
+          { title: "𝑨𝒍-𝑸𝒖𝒓\'𝒂𝒏", rowId: `${_p}? quran` },
+          { title: '𝒑𝒆𝒏𝒈𝒖𝒃𝒂𝒉 𝒔𝒖𝒂𝒓𝒂', rowId: `${_p}? audio` },
+          { title: '𝒋𝒂𝒅𝒊 𝒃𝒐𝒕', rowId: `${_p}? jadibot` },
+          { title: '𝒊𝒏𝒇𝒐', rowId: `${_p}? info` },
+          { title: '𝒕𝒂𝒏𝒑𝒂 𝑲𝒂𝒕𝒆𝒈𝒐𝒓𝒊', rowId: `${_p}? tanpakategori` },
+          { title: '𝒐𝒘𝒏𝒆𝒓', rowId: `${_p}? owner` },
         ]
       }
     ]
