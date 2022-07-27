@@ -35,7 +35,7 @@ const defaultMenu = {
 %readmore`.trim(),
   header: '┌──「 %category 」──⬣',
   body: '│• %cmd %islimit %isPremium',
-  footer: '└───═┅═───⬣\n',
+  footer: '└────═┅═────⬣\n',
   after: `
 ┌──  *BIG THANKS TO*  ───⬣
 │• Allah SWT
