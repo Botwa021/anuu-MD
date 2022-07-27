@@ -24,7 +24,7 @@ const defaultMenu = {
 │• *Database* : %rtotalreg dari %totalreg
 │• *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 │• *Instagram* :
-│• *https://instagram.com/mursid.st*
+│• https://instagram.com/mursid.st
 ├───────────────┈ ⳹
 │       「 𝗚𝗥𝗨𝗣 𝗕𝗢𝗧 」
 │• *bit.ly/grup-wabot-aq¹*
@@ -308,7 +308,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send3TemplateButtonImg(m.chat, `${global.image}`, text.trim(), wm, `𝑷𝒆𝒎𝒊𝒍𝒊𝒌 𝑩𝒐𝒕`, `${_p}owner`, `𝑻𝒉𝒂𝒏𝒌𝒔 𝑻𝒐𝒐`, `${_p}tqto`, `𝑫𝒐𝒏𝒂𝒔𝒊`, `${_p}donasi`)
+    await conn.send3TemplateButtonImg(m.chat, `${global.image}`, text.trim(), wm, `𝑷𝒆𝒎𝒊𝒍𝒊𝒌 𝑩𝒐𝒕`, `${_p}owner`, `𝑹𝒖𝒍𝒆𝒔`, `${_p}rules`, `𝑫𝒐𝒏𝒂𝒔𝒊`, `${_p}donasi`)
  conn.sendFile(m.chat, haori, 'anuu.mp3', null, m, true, {
 type: 'audioMessage', // paksa tanpa convert di ffmpeg
 ptt: true
