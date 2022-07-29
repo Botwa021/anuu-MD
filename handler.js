@@ -32,9 +32,9 @@ module.exports = {
         global.author = global.data.owner
         //global.author = '𝘔𝘶𝘳𝘴𝘪𝘥 𝘚'
         global.wm2 = global.data.namabot + ' ' + global.data.owner
-        global.wm = '© ɴαᴅια вσт ву мυʀѕιᴅ'
+        global.wm = 'ɴαᴅια вσт ву мυʀѕιᴅ'
         global.colong1 = '2022'
-        global.colong2 = '© 𝑵𝒂𝒅𝒊𝒂 𝑩𝒐𝒕'
+        global.colong2 = '© Nadia BOT'
         global.kontak2 = [
         ['6288233832771', '𝘔𝘶𝘳𝘴𝘪𝘥 𝘚', '𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓 𝑩𝒐𝒕', 'mursidmulo@gmail.com', true],
         ['6285893590312', await this.getName('6285893590312@s.whatsapp.net'), '𝑷𝒂𝒓𝒕𝒏𝒆𝒓 𝑵𝒂𝒅𝒊𝒂 𝑩𝒐𝒕', 'nadiafaradiba@gmail.com', true], 
@@ -623,7 +623,7 @@ module.exports = {
                 if (chat.welcome) {
                     let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
                     for (let user of participants) {
-                        let pp = 'https://telegra.ph/file/2d06f0936842064f6b3bb.png'
+                        let pp = 'https://telegra.ph/file/3fa9f52e7a424ab3a3b53.jpg'
                         try {
                             pp = await this.profilePictureUrl(user, 'image')
                         } catch (e) {
@@ -634,14 +634,14 @@ module.exports = {
                             let wel = API('hardianto', '/api/welcome3', {
                                 profile: pp,
                                 name: await this.getName(user),
-                                bg: 'https://telegra.ph/file/c538a6f5b0649a7861174.png',
+                                bg: 'https://telegra.ph/file/bd465c883f07ebaeadbac.jpg',
                                 namegb: await this.getName(id),
                                 member: groupMetadata.participants.length
                             })
                             let lea = API('hardianto', '/api/goodbye3', {
                                 profile: pp,
                                 name: await this.getName(user),
-                                bg: 'https://telegra.ph/file/c538a6f5b0649a7861174.png',
+                                bg: 'https://telegra.ph/file/bd465c883f07ebaeadbac.jpg',
                                 namegb: await this.getName(id),
                                 member: groupMetadata.participants.length
                             })
@@ -764,7 +764,7 @@ function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())]
 }
 
-global.thumb = 'https://telegra.ph/file/538d54a829bd198085a87.jpg'
+global.thumb = 'https://telegra.ph/file/bd465c883f07ebaeadbac.jpg'
 
 global.flaaa = [
  'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
