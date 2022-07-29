@@ -306,13 +306,13 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send3TemplateButtonImg(m.chat, `${global.image}`, text.trim(), wm, `𝑷𝒆𝒎𝒊𝒍𝒊𝒌 𝑩𝒐𝒕`, `${_p}owner`, `𝑹𝒖𝒍𝒆𝒔`, `${_p}rules`, `𝑫𝒐𝒏𝒂𝒔𝒊`, `${_p}donasi`)
+    await conn.send3TemplateButtonImg(m.chat, `${global.image}`, text.trim(), wm, `⍴ᥱmіᥣіk ᑲ᥆𝗍`, `${_p}owner`, `rᥙᥣᥱs`, `${_p}rules`, `ძ᥆ᥒᥲsі`, `${_p}donasi`)
  conn.sendFile(m.chat, haori, 'anuu.mp3', null, m, true, {
 type: 'audioMessage', // paksa tanpa convert di ffmpeg
 ptt: true
      }) 
  } catch (e) {
-    conn.reply(m.chat, '𝑴𝒂𝒂𝒇, 𝒎𝒆𝒏𝒖 𝒔𝒆𝒅𝒂𝒏𝒈 𝒆𝒓𝒓𝒐𝒓', m)
+    conn.reply(m.chat, 'mᥲᥲ𝖿 mᥱᥒᥙ sᥱძᥲᥒg ᥱrr᥆r', m)
     throw e
   }
 }
