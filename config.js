@@ -32,16 +32,16 @@ global.APIKeys = { // APIKey Here
 }
 
 //global.wm = '𝑴𝒚𝑩𝒐𝒕-𝑴𝒖𝒍𝒕𝒊 𝑫𝒆𝒗𝒊𝒄𝒆'
-global.wait = '_*𝒔𝒆𝒅𝒂𝒏𝒈 𝒅𝒊 𝒑𝒓𝒐𝒔𝒆𝒔...*_'
-global.eror = '_*𝒎𝒂𝒂𝒇 𝒔𝒆𝒓𝒗𝒆𝒓 𝒆𝒓𝒓𝒐𝒓...*_'
+global.wait = '*sᥱძᥲᥒg ძі⍴r᥆sᥱs...*'
+global.eror = '*mᥲᥲ𝖿 mᥱᥒᥙ sᥱძᥲᥒg ᥱrr᥆r...*'
 global. image = 'https://telegra.ph/file/bd465c883f07ebaeadbac.jpg'
 
 //========Url Template Buttons=========//
-global.dtu = '𝑰𝒏𝒔𝒕𝒂𝒈𝒓𝒂𝒎'
+global.dtu = 'іᥒs𝗍ᥲgrᥲm'
 global.urlnya = "https://www.instagram.com/mursid.st"
 
 //============= callButtons =============//
-global.dtc = '𝒄𝒂𝒍𝒍 𝒐𝒘𝒏𝒆𝒓'
+global.dtc = 'ᥴᥲᥣᥣ ᥆ᥕᥒᥱr'
 global.phn = '+62 882-3383-2771'
 
 //============= Games ================//
