@@ -13,6 +13,8 @@ handler.all = async function (m) {
     let setting = db.data.settings[this.user.jid]
     let user = global.db.data.users[m.sender]
     
+  
+    
     // salam
     let reg = /(ass?alam|اَلسَّلاَمُ عَلَيْكُمْ|السلام عليکم)/i
     let isSalam = reg.exec(m.text)
@@ -39,7 +41,14 @@ handler.all = async function (m) {
     if (/^bot$/i.test(m.text)) {
         await this.sendButton(m.chat, !(m.isGroup || m.isPrems) && group ? 'hanya grup' : isBanned ? 'chat banned' : banned ? 'user banned' : 'aktif', wm, !(m.isGroup || m.isPrems) && group ? 'donasi' : isBanned ? 'unban' : banned ? 'minta owner kalo mau di unban' : 'donasi', !(m.isGroup || m.isPrems) && group ? '.donasi' : isBanned ? '.unban' : banned ? '.owner' : '.donasi', m)
     }
-
+    
+// update status
+    if (new Date() * 1 - setting.status > 1000) {
+        let _uptime = process.uptime() * 1000
+        let uptime = clockString(_uptime)
+        await this.setBio(`Aktif selama ${uptime} |⁩ Mode : ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik'} | By Mursid S`).catch(_ => _)
+        setting.status = new Date() * 1
+    }
 
     // backup db
     if (setting.backup) {
