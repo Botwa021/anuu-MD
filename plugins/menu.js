@@ -25,10 +25,10 @@ const defaultMenu = {
 │• *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 ├───────────────┈ ⳹
 │       「 𝗚𝗥𝗨𝗣 𝗕𝗢𝗧 」
-│• *bit.ly/grup-wabot-aq¹*
-│• *bit.ly/grup-wabot-aq²*
-│• *bit.ly/grup-wabot-aq³*
-│• *bit.ly/grup-wabot-aq⁴*
+│• bit.ly/grup-wabot-aq¹
+│• bit.ly/grup-wabot-aq²
+│• bit.ly/grup-wabot-aq³
+│• bit.ly/grup-wabot-aq⁴
 └───────═┅═────────⬣
 %readmore`.trim(),
   header: '┌──「 %category 」──⬣',
