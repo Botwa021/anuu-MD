@@ -5,7 +5,7 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌───────═┅═────────⬣
+┌──────═┅═───────⬣
 │            *𝙽𝚊𝚍𝚒𝚊 𝙱𝙾𝚃*
 └┬──────────────┈ ⳹
    │     「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥 」
@@ -29,7 +29,7 @@ const defaultMenu = {
 │• bit.ly/grup-wabot-aq²
 │• bit.ly/grup-wabot-aq³
 │• bit.ly/grup-wabot-aq⁴
-└───────═┅═────────⬣
+└──────═┅═───────⬣
 %readmore`.trim(),
   header: '┌──「 %category 」──⬣',
   body: '│• %cmd %islimit %isPremium',
@@ -53,6 +53,7 @@ const defaultMenu = {
 │• Ziv San
 │• Mursid S
 │• Nadia Cans
+│• Nayla
 │• All Creator Bot
 └─────═┅═─────⬣
 
@@ -215,6 +216,76 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         enabled: !plugin.disabled,
       }
     })
+    const wita = moment.tz('Asia/Makassar').format("HH:mm:ss")
+    const wit = moment.tz('Asia/Jayapura').format("HH:mm:ss")
+    const hariRaya = new Date('January 1, 2023 23:59:59')
+    const sekarang = new Date().getTime()
+    const Selisih = hariRaya - sekarang
+    const jhari = Math.floor( Selisih / (1000 * 60 * 60 * 24));
+    const jjam = Math.floor( Selisih % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+    const mmmenit = Math.floor( Selisih % (1000 * 60 * 60) / (1000 * 60))
+    const ddetik = Math.floor( Selisih % (1000 * 60) / 1000)
+    const hariRayaramadan = new Date('April 21, 2023 23:59:59')
+    const sekarangg = new Date().getTime()
+    const lebih = hariRayaramadan - sekarangg
+    const harii = Math.floor( lebih / (1000 * 60 * 60 * 24));
+    const jamm = Math.floor( lebih % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+    const menitt = Math.floor( lebih % (1000 * 60 * 60) / (1000 * 60))
+    const detikk = Math.floor( lebih % (1000 * 60) / 1000)
+    const natal = new Date('December 24, 2022 23:59:59')
+    const sekara = new Date().getTime()
+    const Kuran = natal - sekara
+    const ahari = Math.floor( Kuran / (1000 * 60 * 60 * 24));
+    const ajam = Math.floor( Kuran % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+    const anet = Math.floor( Kuran % (1000 * 60 * 60) / (1000 * 60))
+    const aetek = Math.floor( Kuran % (1000 * 60) / 1000)
+    let pe = '```'
+    let _uptime = process.uptime() * 1000
+    let _muptime
+    if (process.send) {
+      process.send('uptime')
+      _muptime = await new Promise(resolve => {
+        process.once('message', resolve)
+        setTimeout(resolve, 1000)
+      }) * 1000
+    }
+    let muptime = clockString(_muptime)
+    let uptime = clockString(_uptime)
+    global.jam = time
+    let totalreg = Object.keys(global.db.data.users).length
+    let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
+    let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
+      return {
+        help: Array.isArray(plugin.help) ? plugin.help : [plugin.help],
+        tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
+        prefix: 'customPrefix' in plugin,
+        limit: plugin.limit,
+        premium: plugin.premium,
+        enabled: !plugin.disabled,
+      }
+    })
+    if (teks == '404') {
+      let judul =  `${global.ucapan}, ${name},      
+┌──────═┅═──────⬣
+│    *Hai*,  @${m.sender.split`@`[0]}
+└┬────────────┈ ⳹
+┌┤• Nama : ${name}
+││• Limit : ${limit}
+││• Waktu : ${time}
+││• Total Xp : ${exp}
+││• Role : ${role}
+││• Tag : @${m.sender.split`@`[0]}
+││• Status : ${global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Owner' : 'Users'}
+│└────────────┈ ⳹
+│         「 ACARA 」
+│• *Tahun Baru*
+│ ${jhari} Hari ${jjam} Jam ${mmmenit} Menit ${ddetik} Detik
+│• *Ramadan*
+│ ${harii} Hari ${jamm} Jam ${menitt} Menit ${detikk} Detik
+│• *Natal*
+│ ${ahari} Hari ${ajam} Jam ${anet} Menit ${aetek} Detik
+└──────═┅═──────⬣
+`.trim()
     if (teks == '404') {
       let judul = `${global.ucapan}, ${name}`.trim()
       const sections = [
